@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!-- TODO -->
     <!-- The meta tag sets the page's viewport to be mobile-friendly -->
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Colmar Academy</title>
     <!-- TODO -->
     <!-- Incorporate external css styles here -->
     <link rel="stylesheet" href="styles/styles.css">
 
 </head>
+
 <body class="container">
-    
+
     <!-- TODO -->
     <!-- 1. Start of Navbar -->
     <nav>
         <a href="">
             <!-- Logo -->
             <img class="logo" src="assets/images/ic-logo.svg" alt="Colmar Academy Logo">
-            
+
             <!-- Organisation Title -->
             <span class="logoname logoname-bold">Colmar</span>
             <span class="logoname logoname-light">Academy</span>
-            
+
             <!-- Site Links -->
             <ul>
                 <li><a href="#">Our Campus</a></li>
@@ -36,10 +39,19 @@
 
     <!-- End of Navbar -->
 
+    <!-- TODO -->
+    <!-- Start of Navbar for mobile -->
+    <nav id="nav-mobile">
+        <a href="#"><img src="assets/images/ic-logo.svg" alt="Mobile Logo Home"></a>
+        <a href="#"><img src="assets/images/ic-on-campus.svg" alt="Mobile Logo Campus"></a>
+        <a href="#"><img src="assets/images/ic-online.svg" alt="Mobile Logo Online"></a>
+        <a href="#"><img src="assets/images/ic-login.svg" alt="Mobile Logo Login"></a>
+    </nav>
+    <!-- End of Navbar for mobile -->
 
     <!-- TODO -->
     <!-- 2.  Start of header -->
-    
+
     <!-- Left of header -->
     <header class="imagecontainer">
         <img src="assets/images/banner.jpg" alt="Home banner">
@@ -68,12 +80,14 @@
             <img src="assets/images/information-main.jpg" alt="Practice Banner">
         </div>
         <!-- captions -->
-         <div class="practice-text">
+        <div class="practice-text">
             <!-- Heading 1 -->
             <h1>It doesn't hurt to keep practicing</h1>
             <!-- 1 Paragraph details  -->
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio iusto iste cum saepe, natus corporis beatae maxime assumenda dignissimos laborum culpa dolores ullam quisquam. Aliquid eligendi soluta totam veniam laudantium! <span>Emanuel, Sr Strategist at Hiring.com</span></p>
-         </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio iusto iste cum saepe, natus corporis
+                beatae maxime assumenda dignissimos laborum culpa dolores ullam quisquam. Aliquid eligendi soluta totam
+                veniam laudantium! <span>Emanuel, Sr Strategist at Hiring.com</span></p>
+        </div>
     </section>
     <!-- End of practice -->
 
@@ -85,6 +99,8 @@
         <!-- Event 1 -->
         <div class="event-block">
             <img src="assets/images/information-orientation.jpg" alt="Orientation image">
+            <img class="event-img-mobile" src="assets/images/information-orientation-mobile.jpg"
+                alt="Orientation image">
             <div class="event-text">
                 <h3>Orientation Date</h3>
                 <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
@@ -94,6 +110,7 @@
         <!-- Event 2 -->
         <div class="event-block">
             <img src="assets/images/information-campus.jpg" alt="Orientation image">
+            <img class="event-img-mobile" src="assets/images/information-campus-mobile.jpg" alt="Orientation image">
             <div class="event-text">
                 <h3>Our Campus</h3>
                 <p>Find which campus is close to you</p>
@@ -103,6 +120,8 @@
         <!-- Event 3 -->
         <div class="event-block">
             <img src="assets/images/information-guest-lecture.jpg" alt="Orientation image">
+            <img class="event-img-mobile" src="assets/images/information-guest-lecture-mobile.jpg"
+                alt="Orientation image">
             <div class="event-text">
                 <h3>Our guest lecture</h3>
                 <p>Join our keynote with Oliver Sack about music in medical treatment</p>
@@ -140,4 +159,5 @@
     <!-- End of footer -->
 
 </body>
+
 </html>
