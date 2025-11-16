@@ -29,6 +29,8 @@ a {
     grid-template-columns: [full-start] 0.6fr [center-end center-start] 0.4fr [full-end];
     /* start to center to end */
     grid-template-rows: repeat(6, min-content);
+    max-width: 100rem;
+    margin: 0 auto;
 }
 
 /* TODO */
@@ -126,7 +128,7 @@ header>div>h2 {
 
 header>div>a {
     display: block;
-    width:100%;
+    width: 100%;
     background-color: #484848;
     padding: 0.5rem 0;
     text-align: center;
@@ -255,6 +257,14 @@ footer>ul>li:last-child {
     margin-right: 1.5rem;
 }
 
+/* Hide nav-mobile */
+#nav-mobile {
+    display: none;
+}
+
+/* Hide events mobile */
+
+
 
 nav *,
 nav,
@@ -269,7 +279,6 @@ footer {
     border: 1px solid red;
 }
 
-/* Hide events mobile */
 
 
 /** ********************** **/
@@ -282,7 +291,19 @@ footer {
 /** *********************** **/
 
 /* if the width of screen is 640px and below (aka 40rem x 16px) */
-@media screen and (max-width: 40rem) {}
+@media screen and (max-width: 40rem) {
+    nav {
+        display: none;
+    }
+
+    #nav-mobile {
+        display: flex;
+        align-items: center;
+        height: 4rem;
+        grid-column: full-start / full-end;
+        justify-content: space-around;
+    }
+}
 
 /* *********************** */
 /** End of Mobile Section **/
