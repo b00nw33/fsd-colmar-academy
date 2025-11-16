@@ -66,6 +66,7 @@ nav {
     color: #AAA;
 }
 
+
 /* Set up navigation links' styles */
 nav ul {
     /* border: 1px solid black; */
@@ -87,14 +88,186 @@ nav ul li:last-child {
     padding-right: 1.5rem;
 }
 
-/* Set up header area */
 
+/* Set up header area */
+header {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    /* center vertically */
+    justify-content: center;
+    /* center horizontally */
+    background-color: #D8D8D8;
+}
+
+.imgcontainer {
+    padding: 2rem 1.5rem;
+}
+
+header>img {
+    max-width: 100%;
+    height: auto;
+}
+
+header>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 18rem;
+    padding: 0 1.5rem;
+}
+
+header>div>h1 {
+    font-size: x-large;
+}
+
+header>div>h2 {
+    font-size: large;
+}
+
+header>div>a {
+    display: block;
+    background-color: #484848;
+    padding: 0.5rem 0;
+    text-align: center;
+    color: #FFF;
+}
 
 /* hover effect for call to action link */
+header>div>a:hover {
+    color: rgb(255, 255, 255, 0.5);
+    background-color: rgb(72, 72, 72, 0.5);
+}
 
 
 /* Set up practice section */
+.practice {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
 
+.practice>.imgcontainer>img {
+    max-width: 100%;
+    height: auto;
+}
+
+.practice>.practice-text {
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.practice>.practice-text>h1 {
+    font-size: x-large;
+    margin: 2rem 0 1.5rem 0;
+}
+
+.practice>.practice-text>p {
+    font-size: small;
+    font-weight: lighter;
+}
+
+.practice>.practice-text>p>span {
+    display: block;
+    padding: 2rem 0;
+}
+
+
+/* Set up events section */
+.events {
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    border-left: 1px solid #E7E7E7;
+}
+
+.events .events-block {
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr;
+    border-top: 1px solid #E7E7E7;
+    border-bottom: 1px solid #E7E7E7;
+    align-items: center;
+}
+
+.events>.events-block:last-child {
+    background-color: #D8D8D8;
+}
+
+.events>.events-block>img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem;
+}
+
+.events>.events-block:first-child>img {
+    margin-top: 2rem;
+}
+
+.events>.events-block>.events-text {
+    margin: 2rem;
+}
+
+.events>.events-block>.events-text>h3 {
+    font-size: medium;
+}
+
+.events>.events-block>.events-text>a,
+.events>.events-block>.events-text>p {
+    font-size: small;
+}
+
+.events>.events-block>.events-text>a {
+    color: #3434C6;
+}
+
+.events>.events-block>.events-text>p {
+    margin: 0.5rem 0;
+}
+
+
+/* Set up footer section */
+footer {
+    grid-column: full-start / full-end;
+    display: flex;
+    flex-direction: row;
+    font-size: smaller;
+    border-top: 1px solid #E7E7E7;
+    justify-content: space-between;
+    padding: 1rem 0 2rem 0;
+    color: #8D8D8D;
+}
+
+footer>p {
+    margin-left: 1.5rem;
+}
+
+footer>ul {
+    display: flex;
+    list-style: none;
+}
+
+footer>ul>li {
+    margin-right: 1rem;
+}
+
+footer>ul>li:last-child {
+    margin-right: 1.5rem;
+}
+
+
+nav *,
+nav,
+header *,
+header,
+.practice *,
+.practice,
+.events *,
+.events,
+footer *,
+footer {
+    border: 1px solid red;
+}
 
 /* Hide events mobile */
 
