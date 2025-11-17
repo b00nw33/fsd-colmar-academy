@@ -1,4 +1,25 @@
-/* TODO */
+/* For troubleshooting */
+nav *,
+nav,
+header *,
+header,
+.practice *,
+.practice,
+.events *,
+.events,
+.learning *,
+.learning,
+.learning-mobile *,
+.learning-mobile,
+.thesis *,
+.thesis,
+.events2 *,
+.events2,
+footer,
+footer *,
+footer {
+    /* border: 1px dotted red; */
+}
 
 /* Reset CSS */
 /* Universal selector (*) targets every element (regardless tag, class, ID) */
@@ -33,15 +54,14 @@ a {
     margin: 0 auto;
 }
 
-/* TODO */
 
 /** Start of Desktop Section **/
 /** ************************ **/
 
 /* Set up the navbar for the desktop */
 nav {
-    display: flex;
     grid-column: full-start / full-end;
+    display: flex;
     justify-content: space-between;
     height: 4rem;
 }
@@ -182,7 +202,7 @@ header>div>a:hover {
     border-left: 1px solid #E7E7E7;
 }
 
-.events .events-block {
+.events-block {
     display: grid;
     grid-template-columns: 0.35fr 0.65fr;
     border-top: 1px solid #E7E7E7;
@@ -190,11 +210,12 @@ header>div>a:hover {
     align-items: center;
 }
 
-.events>.events-block:last-child {
+.events>.events-block:last-child,
+.events2>.events-block:first-child  {
     background-color: #D8D8D8;
 }
 
-.events>.events-block>img {
+.events-block>img {
     max-width: 100%;
     height: auto;
     margin: 1rem;
@@ -204,27 +225,94 @@ header>div>a:hover {
     margin-top: 2rem;
 }
 
-.events>.events-block>.events-text {
+.events-block>.events-text {
     margin: 2rem;
 }
 
-.events>.events-block>.events-text>h3 {
+.events-block>.events-text>h3 {
     font-size: medium;
 }
 
-.events>.events-block>.events-text>a,
-.events>.events-block>.events-text>p {
+.events-block>.events-text>a,
+.events-block>.events-text>p {
     font-size: small;
 }
 
-.events>.events-block>.events-text>a {
+.events-block>.events-text>a {
     color: #3434C6;
 }
 
-.events>.events-block>.events-text>p {
+.events-block>.events-text>p {
     margin: 0.5rem 0;
 }
 
+/* Set up learning section */
+.learning {
+    background-color: #eaebec;
+    height: auto;
+    grid-column: full-start / full-end;
+}
+
+.learning-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    font-size: x-large;
+    font-weight: 800;
+    color: #4A4A4A;
+}
+
+.learning-container {
+    display: grid;
+    width: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 2rem;
+    margin: 2rem 4.5rem;
+}
+
+.card a {
+    text-decoration: none;
+    color: #797676;
+}
+
+.card h4 {
+    margin: 1rem;
+    font-size: x-large;
+}
+
+.card-content {
+    margin: 1rem 1rem;
+    width: 60%;
+}
+
+.scope {
+    padding: .5rem 0;
+
+}
+
+.card img {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.card {
+    background-color: #FFF;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* Set up thesis section */
+.thesis-heading {
+    /* display: grid; */
+    grid-column: full-start / full-end;
+    margin: 2rem auto;
+}
 
 /* Set up footer section */
 footer {
@@ -257,6 +345,7 @@ footer>ul>li:last-child {
 
 /* Hide nav-mobile and events mobile */
 .events>.events-block>.events-img-mobile,
+.learning-mobile,
 #nav-mobile {
     display: none;
 }
@@ -268,7 +357,6 @@ footer>ul>li:last-child {
 /** End of Desktop Section **/
 
 
-/* TODO */
 
 /** Start of Mobile Section **/
 /** *********************** **/
@@ -276,8 +364,14 @@ footer>ul>li:last-child {
 /* if the width of screen is 640px and below (aka 40rem x 16px) */
 @media screen and (max-width: 40rem) {
 
+    /* Hide desktop sections */
     nav,
-    .practice {
+    .practice,
+    .events>.events-block>img,
+    .learning,
+    .thesis-left-content,
+    .events2,
+    footer ul {
         display: none;
     }
 
@@ -356,37 +450,58 @@ footer>ul>li:last-child {
         font-weight: lighter;
     }
 
-
-    .events>.events-block>img {
-        display: none;
-    }
-
     .events>.events-block>.events-img-mobile {
         display: block;
     }
 
-    footer ul {
-        display: none;
+    .learning-mobile {
+        display: grid;
+        grid-column: full-start / full-end;
+        border-bottom: 1px solid #E7E7E7;
     }
+
+    .mobile-learning {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .mobile-learning a {
+        text-decoration: none;
+    }
+
+    .mobile-learning li:hover {
+        transform: scale(1.03);
+        background-color: #adadad;
+    }
+
+    .mobile-learning li {
+        text-decoration: none;
+        list-style: none;
+        font-size: large;
+        font-weight: 600;
+        background-color: #D8D8D8;
+        margin: 1rem 1rem 0.5rem 1rem;
+        font-size: 1.2rem;
+        padding: 1.5rem 0 1.5rem 1rem;
+        color: #4b4b4b;
+    }
+
+    .learning-heading-mobile {
+        font-size: xx-large;
+        margin: 2rem auto 0.5rem auto;
+        color: #4f4f4f;
+    }
+
+    .thesis {
+        grid-column: full-start / full-end;
+    }
+
+
 
 }
 
 /* *********************** */
 /** End of Mobile Section **/
-
-
-
-
-
-nav *,
-nav,
-header *,
-header,
-.practice *,
-.practice,
-.events *,
-.events,
-footer *,
-footer {
-    border: 1px solid red;
-}
