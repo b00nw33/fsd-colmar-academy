@@ -18,7 +18,9 @@ header,
 footer,
 footer *,
 footer {
-    /* border: 1px dotted red; */
+/*
+     border: 1px dotted red; 
+*/
 }
 
 /* Reset CSS */
@@ -172,6 +174,7 @@ header>div>a:hover {
     height: auto;
 }
 
+.thesis-left-content,
 .practice>.practice-text {
     padding: 0 1.5rem;
     display: flex;
