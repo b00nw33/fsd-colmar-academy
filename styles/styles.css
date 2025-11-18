@@ -176,7 +176,7 @@ header>div>a:hover {
 
 .thesis-left-content,
 .practice>.practice-text {
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -187,6 +187,7 @@ header>div>a:hover {
     margin: 2rem 0 1.5rem 0;
 }
 
+.thesis-left-content>p,
 .practice>.practice-text>p {
     font-size: small;
     font-weight: lighter;
@@ -256,6 +257,7 @@ header>div>a:hover {
     grid-column: full-start / full-end;
 }
 
+.thesis-heading,
 .learning-heading {
     display: flex;
     align-items: center;
